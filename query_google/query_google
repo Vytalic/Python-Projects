@@ -1,0 +1,16 @@
+# Purpose: Return google searches
+
+from googlesearch import search
+
+def google_search(query):
+    results = []
+    for url in search(query, num_results = 10):
+        results.append(url)
+    return results
+
+# replace search_query string with what you want to search
+search_query = "Python programming"
+search_results = google_search(search_query)
+
+for result in search_results:
+    print(result)
